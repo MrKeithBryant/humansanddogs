@@ -40,9 +40,9 @@ Dog.prototype.cool = function (cool) {
   console.log(`It should make ${this.name} cool and ${this.name} not cool.`);
 };
 
-const sadie = new Dog('sadie', 'normal', 'black', undefined);
+const sadie = new Dog('sadie', 'normal', 'black', false);
 
-const moonshine = new Dog('moonshine', null, null, true, true, false);
+const moonshine = new Dog('moonshine', null, null, true, undefined, false);
 
 const atticus = new Dog('atticus', null, null, null, undefined, false);
 
@@ -67,12 +67,12 @@ function Human (name, pet, feed, cool) {
   this.feed = function (dog) {
     dog.hungry = false;
   };
-  this.cool = true;
+  this.cool = cool;
 }
 
-const mason = new Human('mason', 'happy', null, null, false);
+const mason = new Human('mason', null, null, false);
 
-const julia = new Human('julia', null, false, false);
+const julia = new Human('julia', null, false, true);
 
 // Instances of Human
 // Needed: mason, julia
